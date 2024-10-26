@@ -1,0 +1,45 @@
+/* Characters.css */
+
+.vehicle-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .vehicle-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s ease;
+  }
+  
+  .vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .vehicle-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .vehicle-card button {
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .vehicle-card button:hover {
+    background-color: #0056b3;
+  }
+  
