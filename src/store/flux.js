@@ -1,3 +1,5 @@
+
+
 // flux.js
 const getState = ({ getActions, getStore, setStore }) => {
     return {
@@ -10,6 +12,7 @@ const getState = ({ getActions, getStore, setStore }) => {
         planetDetails: null,
         vehicleDetails: null,
         starshipDetails: null,
+        favorites: [],
       },
       actions: {
         // Llamada para obtener la lista de personajes
@@ -98,6 +101,22 @@ const getState = ({ getActions, getStore, setStore }) => {
           } catch (error) {
             console.error("Error fetching starship details:", error);
           }
+        },
+
+        addToFavorites: (item) => {
+          const store = getStore();
+          const isFavorite = store.favorites.some(fav => fav.uid === item.uid);
+  
+          if (!isFavorite) {
+            setStore({ favorites: [...store.favorites, item] });
+          }
+        },
+  
+        // Función para eliminar un elemento de favoritos
+        removeFromFavorites: (uid) => {
+          const store = getStore();
+          const updatedFavorites = store.favorites.filter(fav => fav.uid !== uid);
+          setStore({ favorites: updatedFavorites });
         },
       },
     };

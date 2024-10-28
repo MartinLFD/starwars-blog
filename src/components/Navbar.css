@@ -1,0 +1,56 @@
+/* Navbar.css */
+
+.favorites-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .favorites-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .favorites-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .favorites-dropdown:hover .favorites-menu {
+    display: block;
+  }
+  
+  .favorite-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+  }
+  
+  .favorite-item a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .remove-favorite-btn {
+    background: none;
+    border: none;
+    color: red;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .no-favorites {
+    color: #666;
+    text-align: center;
+  }
+  

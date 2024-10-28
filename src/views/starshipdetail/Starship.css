@@ -1,0 +1,55 @@
+/* Contenedor principal */
+.starship-detail-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px; /* Mayor espacio alrededor del contenedor */
+   
+  }
+  
+  /* Contenido flex para dividir la izquierda y la derecha */
+  .starship-detail-content {
+    display: flex;
+    max-width: 1000px; /* Aumenta el ancho máximo */
+    width: 100%; /* Asegura que use todo el ancho disponible */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+  }
+  
+  /* Sección izquierda: imagen y nombre */
+  .starship-detail-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: #f1f1f1;
+    flex: 1;
+  }
+  
+  .image-detail-starship {
+    width: 200px; /* Imagen más grande */
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .starship-detail-name {
+    font-size: 32px; /* Nombre más grande */
+    color: #007bff;
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* Sección derecha: información detallada */
+  .starship-detail-right {
+    flex: 2;
+    padding: 30px; /* Espacio adicional alrededor del texto */
+  }
+  
+  .starship-detail-right p {
+    margin: 12px 0; /* Mayor separación entre los párrafos */
+    font-size: 18px; /* Texto más grande */
+    color: #333;
+  }
+  

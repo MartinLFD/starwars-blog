@@ -9,7 +9,7 @@ import { Vehicles } from "../components/vehicle/Vehicles";
 export function Home() {
     return (
         <>
-            < Navbar />
+        
 
             <div className="container">
                 <h1 className="m-5">Characters</h1>

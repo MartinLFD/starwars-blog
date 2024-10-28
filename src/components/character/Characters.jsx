@@ -15,7 +15,7 @@ export function Characters() {
         actions.fetchCharacters();
     }, []);
 
-    
+
 
     // Configuración del carrusel
     const settings = {
@@ -48,22 +48,34 @@ export function Characters() {
 
     return (
         <div className="character-carousel">
-            
-            <Slider {...settings}>
-                {store.characters && store.characters.length > 0 ? (
-                    store.characters.map((character, index) => (
-                        <div key={index} className="character-card">
-                            <h3>{character.name}</h3>
-                            <Link to={`/character/${character.uid}`}>
-                                Ver Más
-                            </Link>
-                        </div>
-                    ))
-                ) : (
-                    <p>Cargando personajes...</p>
-                )}
-            </Slider>
-        </div>
+        <Slider {...settings}>
+          {store.characters && store.characters.length > 0 ? (
+            store.characters.map((character, index) => {
+              // Definir imageUrl dentro de .map() para cada character
+              const imageUrl = `https://starwars-visualguide.com/assets/img/characters/${character.uid}.jpg`;
+                
+  
+              return (
+                <div key={index} className="character-card">
+                  <img src={imageUrl} alt={character.name} className="character-image" />
+                  <h3>{character.name}</h3>
+                  <Link to={`/character/${character.uid}`} className="view-more-link">
+                    Ver Más
+                  </Link>
+                  <button
+                    onClick={() => actions.addToFavorites(character)}
+                    className="add-to-favorites-btn"
+                  >
+                    Añadir a Favoritos
+                  </button>
+                </div>
+              );
+            })
+          ) : (
+            <p>Cargando personajes...</p>
+          )}
+        </Slider>
+      </div>
     );
-}
+  }
 
